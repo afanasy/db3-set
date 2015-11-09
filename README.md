@@ -1,4 +1,5 @@
-[![Linux Build][https://img.shields.io/travis/afanasy/db3-set/master.svg]][https://travis-ci.org/afanasy/db3-set]
+[![Linux Build][travis-image]][travis-url]
+
 Transforming rules in JSON
 
 ### When is this useful?
@@ -35,3 +36,6 @@ set.transform({rating: {'+=': 2}})(fruit)
 // fruit will be
 // {name: 'Apple', rating: 3}
 ```
+
+[travis-image]: https://img.shields.io/travis/afanasy/db3-set/master.svg
+[travis-url]: https://travis-ci.org/afanasy/db3-set
