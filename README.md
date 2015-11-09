@@ -1,6 +1,6 @@
 [![Linux Build][travis-image]][travis-url]
 
-Transforming rules in JSON
+Transforming rules in JSON format
 
 ### When is this useful?
 If you want to use the same transforming rules for js and SQL `set`.
