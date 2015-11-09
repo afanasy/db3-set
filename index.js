@@ -45,6 +45,8 @@ var app = module.exports = {
         if (_.contains(app.operator, func[0]) && (func[1] == '='))
           return sqlString.format('?? = ?? ' + func + ' ?', [key, key, args])
       }
+      if ((key == 'id') && (value === false))
+        return sqlString.format('?? = last_insert_id(??)', [key, key])
       return sqlString.format('?', _.object([[key, value]]))
     }).join(', ')
   },
