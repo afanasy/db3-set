@@ -1,0 +1,27 @@
+{
+  "name": "db3-set",
+  "version": "1.0.0",
+  "description": "Transforming rules in JSON",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afanasy/db3-set.git"
+  },
+  "author": "Afanasii Kurakin <afanasy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afanasy/db3-set/issues"
+  },
+  "homepage": "https://github.com/afanasy/db3-set",
+  "dependencies": {
+    "underscore": "*",
+    "sqlstring": "*",
+    "moment": "*"
+  },
+  "devDependencies": {
+    "expect.js": "*",
+    "mocha": "*"
+  }
+}
