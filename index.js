@@ -35,7 +35,7 @@ var app = module.exports = {
     if (_.isNumber(d) || _.isString(d))
       d = {id: +d}
     return _.map(d, function (value, key) {
-      if (_.isObject(value)) {
+      if (_.isObject(value) && _.size(value)) {
         var func = _.keys(value)[0]
         var args = _.values(value)[0]
         if (func == 'now')
@@ -55,7 +55,7 @@ var app = module.exports = {
       d = {id: +d}
     return function (a) {
       _.each(d, function (value, key) {
-        if (_.isObject(value)) {
+        if (_.isObject(value) && _.size(value)) {
           var func = _.keys(value)[0]
           var args = _.values(value)[0]
           if (func == 'now')

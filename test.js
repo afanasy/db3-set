@@ -20,6 +20,9 @@ describe('#set', function () {
         expect(set.query({id: _.object([[operator, [1, 2]]])})).to.be('`id` = 1 ' + operator + ' 2')
       })
     })
+    it('does not crash on empty object', function () {
+      expect(set.query({created: {}})).to.be('`created` = \'[object Object]\'')
+    })
   })
   describe('#transform', function () {
     var fruit = {id: 1, name: 'Apple'}
@@ -37,6 +40,9 @@ describe('#set', function () {
         fruit.id = 1
         expect(set.transform({id: _.object([[operator, [1, 2]]])})(fruit).id).to.be(eval('1 ' + operator + ' 2'))
       })
+    })
+    it('does not crash on empty object', function () {
+      expect(set.transform({created: {}})(fruit).created).to.eql({})
     })
   })
 })
