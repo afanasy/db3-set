@@ -1,6 +1,4 @@
-[![Linux Build][travis-image]][travis-url]
-[travis-image]: https://img.shields.io/travis/afanasy/db3-set/master.svg
-[travis-url]: https://travis-ci.org/afanasy/db3-set
+[![Build Status](https://api.travis-ci.org/afanasy/db3-set.svg)](https://travis-ci.org/afanasy/db3-set)
 
 Transforming rules in JSON format
 
