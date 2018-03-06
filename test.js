@@ -1,8 +1,6 @@
-var
-  _ = require('underscore'),
-  moment = require('moment'),
-  expect = require('expect.js'),
-  set = require('./')
+var _ = require('underscore')
+var expect = require('expect.js')
+var set = require('./')
 
 describe('#set', function () {
   describe('#query', function () {
@@ -33,7 +31,7 @@ describe('#set', function () {
       expect(set.transform({id: 3})(fruit).id).to.be(3)
     })
     it('transforms with now', function () {
-      expect(set.transform({created: {now: true}})(fruit).created).to.be(moment().format('YYYY-MM-DD HH:mm:ss'))
+      expect(set.transform({created: {now: true}})(fruit).created).to.be((new Date(Date.now() - (new Date).getTimezoneOffset() * 60000)).toISOString().substring(0, 19).replace('T', ' '))
     })
     _.each(set.operator, function (operator) {
       it('transforms object with ' + operator + ' operator', function () {

@@ -1,7 +1,5 @@
-var
-  _ = require('underscore'),
-  moment = require('moment'),
-  sqlString = require('sqlstring')
+var _ = require('underscore')
+var sqlString = require('sqlstring')
 
 var app = module.exports = {
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators
@@ -59,7 +57,7 @@ var app = module.exports = {
           var func = _.keys(value)[0]
           var args = _.values(value)[0]
           if (func == 'now')
-            return a[key] = moment().format('YYYY-MM-DD HH:mm:ss')
+            return a[key] = (new Date(Date.now() - (new Date).getTimezoneOffset() * 60000)).toISOString().substring(0, 19).replace('T', ' ')
           if (_.contains(app.operator, func))
             return a[key] = app.set(func, args[1])(args[0])
           if (_.contains(app.operator, func[0]) && (func[1] == '='))
