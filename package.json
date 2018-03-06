@@ -1,6 +1,6 @@
 {
   "name": "db3-set",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Transforming rules in JSON format",
   "scripts": {
     "test": "mocha"
